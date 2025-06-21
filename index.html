@@ -29,11 +29,10 @@
     }
 
     .slider-container {
-    display: flex;
-    width: 600vw; /* sebelumnya 500vw karena 5 slide */
-    transition: transform 0.6s ease;
+      display: flex;
+      width: 600vw;
+      transition: transform 0.6s ease;
     }
-
 
     .slide {
       position: relative;
@@ -87,177 +86,144 @@
       z-index: 5;
     }
 
-    .arrow-left {
-      left: 10px;
-    }
-
-    .arrow-right {
-      right: 10px;
-    }
+    .arrow-left { left: 10px; }
+    .arrow-right { right: 10px; }
 
     @media (max-width: 600px) {
       .greeting-card {
         padding: 20px 10px;
       }
-
-      .greeting-card h1 {
-        font-size: 1.4em;
-      }
-
-      .greeting-card p {
-        font-size: 1em;
-      }
-
+      .greeting-card h1 { font-size: 1.4em; }
+      .greeting-card p { font-size: 1em; }
       .arrow-btn {
         font-size: 1.4em;
         padding: 4px 8px;
       }
-
-      .arrow-left {
-        left: 5px;
-      }
-
-      .arrow-right {
-        right: 5px;
-      }
+      .arrow-left { left: 5px; }
+      .arrow-right { right: 5px; }
     }
   </style>
 </head>
 <body>
+
+<!-- Layar pembuka -->
 <div id="landing" style="position:fixed; top:0; left:0; right:0; bottom:0; background:#fff; display:flex; justify-content:center; align-items:center; z-index:9999;">
   <button onclick="startCard()" style="font-size:1.5rem; padding:12px 24px; background:#00bfff; color:#fff; border:none; border-radius:8px; cursor:pointer;">Buka Kartu Ucapan 🎉</button>
 </div>
 
+<!-- Musik -->
 <audio id="bgmusic" loop>
   <source src="thnh_nabi_7120371263280827675.mp3" type="audio/mpeg">
 </audio>
 
-        <!-- Slide 1 -->
-        <div class="slide">
-          <button class="arrow-btn arrow-right" onclick="nextSlide()">›</button>
-          <div class="greeting-card">
-            <div class="gif-wrapper">
-              <div class="tenor-gif-embed" data-postid="15202636509398621190" data-share-method="host" data-aspect-ratio="1" data-width="180px"></div>
-            </div>
-            <h1>Selamat Ulang Tahun Karena!</h1>
-            <p>aku punya pesan nihh untuk besti terbaik, dan tercatik</p>
-          </div>
-        </div>
+<div class="card-background">
+  <div class="slider-wrapper">
+    <div id="slider" class="slider-container">
 
-        <!-- Slide 2 -->
-        <div class="slide">
-          <button class="arrow-btn arrow-left" onclick="prevSlide()">‹</button>
-          <button class="arrow-btn arrow-right" onclick="nextSlide()">›</button>
-          <div class="greeting-card">
-            <div class="gif-wrapper">
-            <div class="tenor-gif-embed" data-postid="14105316" data-share-method="host" data-aspect-ratio="1.23333" data-width="180px">
-                <a href="https://tenor.com/view/mochi-laugh-cat-gif-14105316">Mochi Laugh Sticker</a>
-            </div>
-            </div>
-            <h1>HEHEHE...</h1>
-            <p>Nungguin ya!!!</p>
-            <p>yo klik tombol panah kanan untuk lanjut ke slide selanjutnya!</p>
+      <!-- Semua slide -->
+      <div class="slide">
+        <button class="arrow-btn arrow-right" onclick="nextSlide()">›</button>
+        <div class="greeting-card">
+          <div class="gif-wrapper">
+            <div class="tenor-gif-embed" data-postid="15202636509398621190" data-share-method="host" data-aspect-ratio="1" data-width="180px"></div>
           </div>
+          <h1>Selamat Ulang Tahun Karena!</h1>
+          <p>aku punya pesan nihh untuk besti terbaik, dan tercatik</p>
         </div>
-
-<!-- Slide 3 -->
-<div class="slide">
-  <div class="greeting-card">
-    <!-- Stiker Peachcat -->
-    <div class="gif-wrapper">
-      <div class="tenor-gif-embed" data-postid="4749735362582652561"
-        data-share-method="host" data-aspect-ratio="1.2" data-width="180px">
-        <a href="https://tenor.com/view/peachcat-gif-4749735362582652561">Peachcat GIF</a>
       </div>
-    </div>
 
-    <h1>Pesan Khusus 💖</h1>
-    <p>Selamat Ulangtahun cantik, <br>Makasih ya udah selalu ada buat aku. Makasih juga udah mau jadi temennya Rasyaa dan sabar dengerin curhatan-curhatan aku wkwk. </p>
-
-    <!-- Tombol geser ke kanan/kiri (kalau perlu) -->
-    <button class="arrow-btn arrow-left" onclick="prevSlide()">‹</button>
-    <button class="arrow-btn arrow-right" onclick="nextSlide()">›</button>
-  </div>
-</div>
-
-        <!-- Slide 4 -->
-        <div class="slide">
-          <button class="arrow-btn arrow-left" onclick="prevSlide()">‹</button>
-          <button class="arrow-btn arrow-right" onclick="nextSlide()">›</button>
-          <div class="greeting-card">
-            <div class="gif-wrapper">
-            <div class="tenor-gif-embed" data-postid="18039319" data-share-method="host" data-aspect-ratio="1.28514" data-width="180px">
-                <a href="https://tenor.com/view/mochi-mochi-peach-cat-gif-18039319">Mochi Mochi Peach Cat GIF</a>
-            </div>
-            </div>
-
-            <h1>Doa💙</h1>
-            <p>"Semoga Allah selalu jagain Karena, kasih kesehatan, rezeki yang lancar, dan istiqomah. Semoga Kuliahnya dimudahkan, dosen-dosennya baik, dan nilainya bagus semua. Pokoknya semoga semua hal baik selalu nyamperin Karena ya. Aamiin 🤍".</p>
-          </div>
-        </div>
-
-        <!-- Slide 5 -->
-        <div class="slide">
+      <div class="slide">
         <button class="arrow-btn arrow-left" onclick="prevSlide()">‹</button>
         <button class="arrow-btn arrow-right" onclick="nextSlide()">›</button>
         <div class="greeting-card">
-            <div class="gif-wrapper">
-            <div class="tenor-gif-embed" data-postid="2073275963562890658" data-share-method="host" data-aspect-ratio="1.06667" data-width="180px">
-                <a href="https://tenor.com/view/vanm02-gif-2073275963562890658">Vanm02 Sticker</a>
-            </div>
-            </div>
-            <h1>🤍🎈</h1>
-            <p>maaf ya belum bisa bikin flower yang karene mau, btw mau jalan-jalan kapan nihh!</p>
-            <p>masih ada kejutan yu geser lagi😍</p>
+          <div class="gif-wrapper">
+            <div class="tenor-gif-embed" data-postid="14105316" data-share-method="host" data-aspect-ratio="1.23333" data-width="180px"></div>
+          </div>
+          <h1>HEHEHE...</h1>
+          <p>Nungguin ya!!!</p>
+          <p>yo klik tombol panah kanan untuk lanjut ke slide selanjutnya!</p>
         </div>
-        </div>
+      </div>
 
-        
-                <!-- Slide 6 -->
-        <div class="slide">
+      <div class="slide">
+        <button class="arrow-btn arrow-left" onclick="prevSlide()">‹</button>
+        <button class="arrow-btn arrow-right" onclick="nextSlide()">›</button>
+        <div class="greeting-card">
+          <div class="gif-wrapper">
+            <div class="tenor-gif-embed" data-postid="4749735362582652561" data-share-method="host" data-aspect-ratio="1.2" data-width="180px"></div>
+          </div>
+          <h1>Pesan Khusus 💖</h1>
+          <p>Selamat Ulangtahun cantik, makasih udah jadi temen terbaik!</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <button class="arrow-btn arrow-left" onclick="prevSlide()">‹</button>
+        <button class="arrow-btn arrow-right" onclick="nextSlide()">›</button>
+        <div class="greeting-card">
+          <div class="gif-wrapper">
+            <div class="tenor-gif-embed" data-postid="18039319" data-share-method="host" data-aspect-ratio="1.28514" data-width="180px"></div>
+          </div>
+          <h1>Doa 💙</h1>
+          <p>Semoga Allah selalu jaga Karena, kuliahnya lancar, nilainya bagus. Aamiin 🤍</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <button class="arrow-btn arrow-left" onclick="prevSlide()">‹</button>
+        <button class="arrow-btn arrow-right" onclick="nextSlide()">›</button>
+        <div class="greeting-card">
+          <div class="gif-wrapper">
+            <div class="tenor-gif-embed" data-postid="2073275963562890658" data-share-method="host" data-aspect-ratio="1.06667" data-width="180px"></div>
+          </div>
+          <h1>🤍🎈</h1>
+          <p>Maaf ya belum bisa kasih flower... jalan-jalan yuk?</p>
+        </div>
+      </div>
+
+      <div class="slide">
         <button class="arrow-btn arrow-left" onclick="prevSlide()">‹</button>
         <div class="greeting-card">
-            <div class="gif-wrapper">
-            <div class="tenor-gif-embed" data-postid="26525351" data-share-method="host" data-aspect-ratio="1.18519" data-width="180px">
-                <a href="https://tenor.com/view/mochi-blue-roses-gif-26525351">Mochi Blue Roses Sticker</a>
-            </div>
-            </div>
-            <h1>Hadiah buat Karena 🎁</h1>
-            <p>Ga banyak yang bisa aku kasih, tapi rasyaa harap ini bisa bikin Karena senyum hehe. Selamat ulang tahun ya Karenaa! 🎉🤍</p>
+          <div class="gif-wrapper">
+            <div class="tenor-gif-embed" data-postid="26525351" data-share-method="host" data-aspect-ratio="1.18519" data-width="180px"></div>
+          </div>
+          <h1>Hadiah 🎁</h1>
+          <p>Ga banyak, tapi semoga Karena senyum. Selamat ulang tahun! 🎉🤍</p>
         </div>
-        </div>
-
       </div>
+
     </div>
   </div>
+</div>
 
-  <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-  <script>
-    let currentSlide = 0;
-    const totalSlides = 6;
-    const slider = document.getElementById("slider");
+<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+<script>
+  let currentSlide = 0;
+  const totalSlides = 6;
+  const slider = document.getElementById("slider");
 
-    function updateSlider() {
-      slider.style.transform = `translateX(-${currentSlide * 100}vw)`;
+  function updateSlider() {
+    slider.style.transform = `translateX(-${currentSlide * 100}vw)`;
+  }
+
+  function nextSlide() {
+    if (currentSlide < totalSlides - 1) {
+      currentSlide++;
+      updateSlider();
     }
+  }
 
-    function nextSlide() {
-      if (currentSlide < totalSlides - 1) {
-        currentSlide++;
-        updateSlider();
-      }
+  function prevSlide() {
+    if (currentSlide > 0) {
+      currentSlide--;
+      updateSlider();
     }
+  }
 
-    function prevSlide() {
-      if (currentSlide > 0) {
-        currentSlide--;
-        updateSlider();
-      }
-    }
-    function startCard() {
-  document.getElementById("landing").style.display = "none";
-  document.getElementById("bgmusic").play();
-}
-  </script>
+  function startCard() {
+    document.getElementById("landing").style.display = "none";
+    document.getElementById("bgmusic").play();
+  }
+</script>
 </body>
 </html>
